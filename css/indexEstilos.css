@@ -20,3 +20,119 @@
 body {
     font-family: 'Poppins','sans-serif';
 }
+
+/* Barra de navegación */
+
+.Navegacion {
+    background: var(--complementos);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.Navegacion__menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: var(--body-2);
+    text-decoration: none;
+}
+
+.Navegacion__logo {
+    font-size: 25px;
+    font-weight: var(--peso-grande);
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.menu--items {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 45px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.menu--items--links {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.menu--items--links:hover {
+    background: var(--textos-normales);
+    transition: .5s;
+}
+
+.Navegacion__toggle {
+    color: var(--body-2);
+    background: none;
+    border: none;
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+/* se aplica cuando sea menos de 768 */
+@media (max-width: 768px)  {
+    .Navegacion {
+        background: var(--complementos);
+        height: 60px;
+        
+    }
+
+    .Navegacion__logo {
+        font-size: 20px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background: var(--titulos);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto; /*agregar scroll cuando la pantalla este muy chica*/
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .menu--items {
+        line-height: 70px;
+    }
+
+    .menu--items--links:hover {
+        background: none;
+        color: var(--textos-normales);
+    }
+
+    .Navegacion__toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu_visible {
+        left: 0;
+    }
+
+}
