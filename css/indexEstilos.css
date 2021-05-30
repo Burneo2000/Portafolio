@@ -24,23 +24,31 @@ body {
 /* Barra de navegación */
 
 .Navegacion {
-    background: var(--complementos);
+    background: var(--body-2);
     height: 80px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+
+    transition: all 0.5s ease;
 }
 
 .Navegacion__menu {
     display: flex;
     justify-content: space-between;
-    max-width: 992px;
-    margin: 0 auto;
+}
+
+.Navegacion.active {
+    background: var(--complementos);
+}
+
+.Navegacion.active .nav-link {
+    color: var(--body-2);
 }
 
 .nav-link {
-    color: var(--body-2);
+    color: var(--titulos);
     text-decoration: none;
 }
 
@@ -72,6 +80,7 @@ body {
 
 .menu--items--links:hover {
     background: var(--textos-normales);
+    color: var(--body-2);
     transition: .5s;
 }
 
@@ -85,12 +94,81 @@ body {
     display: none;
 }
 
+/* Principal, presentación */
+.principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    padding-top: 20px;
+    height: 100vh;
+
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    align-content: center;
+    grid-template-areas: 
+    "presentacion   imagen  redes"
+    "presentacion   imagen  redes";
+}
+
+.container__presentacion {
+    grid-area: presentacion;
+}
+
+.container__presentacion-titulo {
+    font-size: 60px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+}
+
+.container__presentacion-titulo i {
+    font-size: 40px;
+}
+
+.container__presentacion-texto {
+    font-size: 30px;
+    color: var(--textos-normales);
+    font-weight: var(--perso-normal);
+}
+
+.container__imagen {
+    grid-area: imagen;
+}
+
+.container__imagen img {
+    width: 400px;
+}
+
+.container__redes {
+    grid-area: redes;
+}
+
+    .container__redes .redes--items {
+        list-style: none;
+        padding: 5px 0;
+    }
+
+        .container__redes .redes--items .redes--items-link {
+            color: var(--textos-normales);
+            text-decoration: none;
+        }
+            .container__redes .redes--items .redes--items-link i {
+                font-size: 30px;
+            }
+
 /* se aplica cuando sea menos de 768 */
 @media (max-width: 768px)  {
     .Navegacion {
         background: var(--complementos);
         height: 60px;
         
+    }
+
+    .nav-link {
+        color: var(--body-2);
     }
 
     .Navegacion__logo {
