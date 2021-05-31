@@ -24,7 +24,6 @@ body {
 /* Barra de navegación */
 
 .Navegacion {
-    background: var(--body-2);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -53,7 +52,7 @@ body {
 }
 
 .Navegacion__logo {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: var(--peso-grande);
     padding: 0 40px;
     line-height: 80px;
@@ -66,7 +65,7 @@ body {
 }
 
 .menu--items {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 10px;
     line-height: 45px;
     text-transform: uppercase;
@@ -106,7 +105,7 @@ body {
     height: 100vh;
 
     display: grid;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     align-content: center;
     grid-template-areas: 
@@ -134,6 +133,23 @@ body {
     font-weight: var(--perso-normal);
 }
 
+.container__presentacion-boton {
+    padding: 20px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    border: none;
+    color: var(--body-2);
+    font-weight: var(--peso-grande);
+    cursor: pointer;
+    background: var(--complementos);
+    box-shadow: 0 1px 0 rgba(0,0,0, .3);
+    transition: 0.5s all;
+}
+
+.container__presentacion-boton:hover {
+    background: var(--titulos);
+}
+
 .container__imagen {
     grid-area: imagen;
 }
@@ -143,21 +159,20 @@ body {
 }
 
 .container__redes {
+    width: 150px;
     grid-area: redes;
 }
+    .container__redes .redes--items-link {
+        color: var(--complementos);
+        text-decoration: none;
 
-    .container__redes .redes--items {
-        list-style: none;
-        padding: 5px 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 0;
     }
-
-        .container__redes .redes--items .redes--items-link {
-            color: var(--textos-normales);
-            text-decoration: none;
+        .container__redes .redes--items-link i {
+            font-size: 30px;
         }
-            .container__redes .redes--items .redes--items-link i {
-                font-size: 30px;
-            }
 
 /* se aplica cuando sea menos de 768 */
 @media (max-width: 768px)  {
@@ -212,5 +227,67 @@ body {
     .menu_visible {
         left: 0;
     }
+
+
+    /* Principal, presentación */
+    .container {
+        padding-top: 20px;
+    
+        display: grid;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        /* justify-content: center; */
+        grid-template-areas: 
+        "imagen"
+        "presentacion"
+        "redes";
+    }
+    
+    .container__presentacion {
+        grid-area: presentacion;
+    }
+    
+    .container__presentacion-titulo {
+        font-size: 30px;
+        color: var(--titulos);
+        font-weight: var(--peso-grande);
+    }
+    
+    .container__presentacion-titulo i {
+        font-size: 20px;
+    }
+    
+    .container__presentacion-texto {
+        font-size: 20px;
+        color: var(--textos-normales);
+        font-weight: var(--perso-normal);
+    }
+    
+    .container__imagen {
+        grid-area: imagen;
+    }
+    
+    .container__imagen img {
+        width: 150px;
+    }
+    
+    .container__redes {
+        grid-area: redes;
+        margin: 0 auto;
+        width: 50%;
+    }
+    
+        .container__redes .redes--items-link {
+            color: var(--textos-normales);
+            text-decoration: none;
+            display: inline-block;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+            .container__redes .redes--items-link i {
+                font-size: 30px;
+                margin: 0 20px;
+            }
 
 }
