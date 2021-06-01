@@ -29,3 +29,5 @@ const barraDeNavegacion = document.getElementById('Navegacion');
 window.addEventListener('scroll', () => {
     barraDeNavegacion.classList.toggle('active', window.scrollY > 0); //Agregas o quitamos la clase Active al header
 });
+
+
