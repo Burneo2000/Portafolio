@@ -24,9 +24,10 @@ body {
 /* Barra de navegación */
 
 .Navegacion {
+    
     height: 80px;
-    position: fixed;
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -35,6 +36,10 @@ body {
 }
 
 .Navegacion__menu {
+    /* background: red; */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -55,19 +60,17 @@ body {
 .Navegacion__logo {
     font-size: 20px;
     font-weight: var(--peso-grande);
-    padding: 0 40px;
     line-height: 80px;
 }
 
 .menu {
     display: flex;
-    margin-right: 40px;
     list-style: none;
 }
 
 .menu--items {
     font-size: 16px;
-    margin: 0 10px;
+    margin: 0 0 0 10px;
     line-height: 45px;
     text-transform: uppercase;
     width: max-content;
@@ -156,7 +159,7 @@ body {
 }
 
 .container__imagen img {
-    width: 400px;
+    width: 350px;
 }
 
 .container__redes {
@@ -291,4 +294,10 @@ body {
                 margin: 0 20px;
             }
 
+}
+
+
+/* Se aplica cunado la resolución de pantalla es menor a 576px */
+@media (max-width: 576px) {
+    
 }
