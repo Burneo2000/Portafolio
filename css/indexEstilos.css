@@ -113,8 +113,8 @@ body {
     align-items: center;
     align-content: center;
     grid-template-areas: 
-    "presentacion   imagen  redes"
-    "presentacion   imagen  redes";
+    "presentacion   imagen  imagen  redes"
+    "presentacion   imagen  imagen  redes";
 }
 
 .container__presentacion {
@@ -122,7 +122,7 @@ body {
 }
 
 .container__presentacion-titulo {
-    font-size: 60px;
+    font-size: 50px;
     color: var(--titulos);
     font-weight: var(--peso-grande);
 }
@@ -132,12 +132,12 @@ body {
 }
 
 .container__presentacion-texto {
-    font-size: 30px;
+    font-size: 25px;
     color: var(--textos-normales);
     font-weight: var(--perso-normal);
 }
 
-.container__presentacion-boton {
+.botonPredeterminado {
     padding: 20px;
     border-radius: 7px;
     text-transform: uppercase;
@@ -150,7 +150,7 @@ body {
     transition: 0.5s all;
 }
 
-.container__presentacion-boton:hover {
+.botonPredeterminado:hover {
     background: var(--titulos);
 }
 
@@ -159,7 +159,7 @@ body {
 }
 
 .container__imagen img {
-    width: 350px;
+    width: 100%;
 }
 
 .container__redes {
@@ -177,6 +177,64 @@ body {
         .container__redes .redes--items-link i {
             font-size: 30px;
         }
+
+
+/* Sobre mi */
+.presentacion {
+    background: var(--body-2);
+}
+
+.sobreMi {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobreMi .contenedor {
+    height: 100vh;
+    display: grid;
+    gap: 40px;
+    align-items: center;
+    align-content: center;
+    grid-template-areas:
+    "titulo titulo" 
+    "foto   descripcion";
+}
+
+.container__titulo {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 50px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+}
+
+.container__miFoto {
+    grid-area: foto;
+}
+
+.container__miFoto {
+    width: 300px;
+    height: 300px;
+}
+
+.container__miFoto img {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+}
+
+.container__descripcion {
+    grid-area: descripcion;
+}
+
+.container__descripcion p {
+    font-size: 18px;
+    color: var(--textos-normales);
+    font-weight: var(--perso-normal);
+    line-height: 1.5;
+    text-align: justify;
+}
 
 /* se aplica cuando sea menos de 768 */
 @media (max-width: 768px)  {
@@ -293,6 +351,49 @@ body {
                 font-size: 30px;
                 margin: 0 20px;
             }
+
+
+    /* Sobre mi */
+    .sobreMi .contenedor {
+        height: 100vh;
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        /* align-content: center; */
+        grid-template-areas:
+        "titulo" 
+        "foto"
+        "descripcion";
+    }
+
+    .container__titulo {
+        font-size: 30px;
+    }
+
+    .container__miFoto {
+        grid-area: foto;
+    }
+
+    .container__miFoto {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+
+    .container__miFoto img {
+        width: 100%;
+    }
+
+    .container__descripcion {
+        grid-area: descripcion;
+    }
+
+    .container__descripcion p {
+        font-size: 14px;
+        text-align: center;
+    }
+
 
 }
 

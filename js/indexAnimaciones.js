@@ -8,6 +8,10 @@ const animar = (clase, duracion, origen, distancia) => {
     });
 }
 
-animar('.principal',3000,'top','100px');
 animar('.animarMenu',3000,'bottom','-100px');
+animar('.container__presentacion',3000,'top','100px');
+animar('.container__presentacion-texto',4000,'top','100px');
+animar('.container__redes',4000,'right','100px');
+animar('.container__imagen',6000,'right','100px');
 animar('.animarLogo',3000,'bottom','-100px');
+animar('.sobreMi',3000,'right','400px');
