@@ -236,6 +236,67 @@ body {
     text-align: justify;
 }
 
+/* Mis habilidades */
+.misHabilidades {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.misHabilidades .contenedor {
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: space-between;
+    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(4, 22.5%);
+}
+
+ .misHabilidades .contenedor h3 {
+    grid-column: 1 / 5;
+}
+
+.misHabilidades .contenedor h3 {
+    font-size: 50px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.tecnologia {
+    /* background: #f7f8fc; */
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecnologia {
+    /* box-shadow: 4px 4px 10px rgba(0, 0, 0, .5); */
+    border-radius: 10px;
+    border: 1px solid var(--titulos);
+}
+
+.tecnologia__icono i {
+    font-size: 60px;
+    color: var(--titulos);
+}
+
+.tecnologia__nombre p {
+    color: var(--textos-normales);
+    font-size: 18px;
+    font-weight: var(--perso-normal);
+}
+
+
+
+
+
 /* se aplica cuando sea menos de 768 */
 @media (max-width: 768px)  {
     .Navegacion {
@@ -360,7 +421,6 @@ body {
         gap: 20px;
         align-items: center;
         text-align: center;
-        /* align-content: center; */
         grid-template-areas:
         "titulo" 
         "foto"
