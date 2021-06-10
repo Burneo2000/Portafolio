@@ -238,14 +238,10 @@ body {
 
 /* Mis habilidades */
 .misHabilidades {
-    /* background: ; */
-}
-
-.misTecnologias {
-    width: 70%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-}
+}   
 
 .misHabilidades .contenedor {
     height: 100vh;
@@ -253,9 +249,8 @@ body {
     gap: 20px;
     align-content: center;
     grid-template-areas:
-    "contenido     contenido  contenido"
-    "html          css        javascript"
-    "bootstrap     git        mysql";
+    "contenido     contenido  contenido     contenido       contenido   contenido"
+    "html          css        javascript    bootstrap       git         mysql";
 }
 
 .misHabilidades .contenedor .contenido {
@@ -326,12 +321,193 @@ body {
 }
 
 .proyectos {
-    background: #688ab0;
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    /* height: 100vh; */
 }
 
+.proyectos .contenedor {
+    
+    background: linear-gradient(
+        90deg,
+        rgba(5, 72, 82, 1) 0%,
+        rgba(9, 39, 79, 1) 50%,
+        rgba(51, 47, 83, 1) 100%,
+    );
+    margin: 0 auto;
+    padding: 0 6px;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.c-card {
+    background: red;
+    display: flex;
+    padding: 20px;
+}
+
+.card {
+    max-width: 500px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--complementos);
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, .25);
+}
+
+.card__banner {
+    position: relative;
+}
+
+.card__banner img {
+    display: block;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    align-items: center;
+}
+
+.c-background {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+    width: 100%;
+}
+
+.card__poster img {
+    max-width: 130px;
+    border-radius: 5px;
+}
+
+.card__banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 20px 0px;
+    text-align: right;
+}
+
+.content-title {
+    font-size: 20px;
+    color: var(--body-2);
+    font-weight: var(--peso-grande);
+    margin-bottom: 0;
+}
+
+.content-subtitulo {
+    font-size: 18px;
+    color: var(--body-2);
+    font-weight: var(--perso-normal);
+    margin: 0;
+}
+
+.content-btn {
+    cursor: pointer;
+    border: 1px solid var(--complementos);
+    background-color: transparent;
+    border-radius: 5px;
+    color: var(--body-2);
+    font-weight: var(--perso-normal);
+    margin-top: 10px;
+    padding: 5px 10px;
+    transition: all .6s ease;
+}
+
+.content-btn:hover {
+    background: var(--complementos);
+}
+
+.content-iconos i {
+    margin-top: 10px;
+    color: var(--body-2);
+    background-color: var(--titulos);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.content-iconos i:hover {
+    color: var(--complementos);
+}
+
+.drop {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.drop i {
+    display: block;
+    cursor: pointer;
+    color: var(--titulos);
+    font-size: 30px;
+}
+
+.drop i:hover {
+    color: var(--complementos);
+}
+
+.card__descripcion {
+    /* height: 0px; */
+}
+
+.c-card__descripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.card__descripcion-texto h3 {
+    font-size: 20px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+    border-bottom: 1px solid var(--titulos);
+}
+
+.card__descripcion-texto p {
+    font-size: 18px;
+    color: var(--textos-normales);
+    font-weight: var(--perso-normal);
+    text-align: justify;
+}
+
+.card__descripcion-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.persona {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--titulos);
+    transition: all .5s ease;
+}
+
+.persona:hover {
+    border-color: var(--body-2);
+}
+
+.persona img {
+    position: absolute;
+    top: -5px;
+}
 
 
 
@@ -530,8 +706,12 @@ body {
         grid-area: mysql;
     }
     
-    .misHabilidades .contenedor h3 {
+    .misHabilidades .contenedor .contenido h3 {
         font-size: 30px;
+    }
+
+    .misHabilidades .contenedor .contenido p {
+        font-size: 14px;
     }
     
     .tecnologia {
