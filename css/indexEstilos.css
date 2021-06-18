@@ -408,14 +408,8 @@ body {
 
 
 
-
-
-
-
-
-
 /* se aplica cuando sea menos de 768 */
-@media (max-width: 768px)  {
+@media only screen and (max-width: 768px)  {
     .Navegacion {
         background: var(--complementos);
         height: 60px;
@@ -450,6 +444,10 @@ body {
         transition: left 0.3s;
     }
 
+    .menu_visible {
+        left: 0;
+    }
+
     .menu--items {
         line-height: 70px;
     }
@@ -459,14 +457,14 @@ body {
         color: var(--textos-normales);
     }
 
+    
+
     .Navegacion__toggle {
         display: block;
         cursor: pointer;
     }
 
-    .menu_visible {
-        left: 0;
-    }
+    
 
 
     /* Principal, presentación */
