@@ -1,9 +1,11 @@
 // Programación para hacer aparecer el menu cuando le damos click en el boton toggle
-const navToggle = document.querySelector('.Navegacion__toggle');
+const navToggle = document.getElementById('Navegacion__toggle');
 const navToggleIcono = document.querySelector('.Navegacion__toggle i');
-const menu = document.querySelector('.menu');
+const menu = document.getElementById('menu');
 
+menu.classList.remove('menu_visible');//Al cargar la pagina inicia con la clase menu_visible añadida
 navToggle.addEventListener('click', () => {
+    
     menu.classList.toggle('menu_visible'); //si esta la clase lo elimina, no esta lo añade
 
     //Si la barra de navegación ya contiene la clase menu_visible cambiamos el icono de hamburguesa por la X
