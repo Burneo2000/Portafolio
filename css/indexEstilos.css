@@ -415,7 +415,7 @@ body {
 
 
 /* se aplica cuando sea menos de 768 */
-@media screen and (max-width: 768px)  {
+@media only screen and (max-width: 768px)  {
     .Navegacion {
         background: var(--complementos);
         height: 60px;
