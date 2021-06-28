@@ -406,6 +406,25 @@ body {
     font-weight: var(--peso-grande);
 }
 
+.tarjetas__vacias {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tarjetas__vacias h4 {
+    font-size: 16px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+}
+
+.tarjetas .card a .fa-tools {
+    color: var(--complementos);
+    font-size: 80px;
+    
+}
+
+
 
 
 /* se aplica cuando sea menos de 768 */
