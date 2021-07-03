@@ -32,5 +32,15 @@ window.addEventListener('scroll', () => {
     barraDeNavegacion.classList.toggle('active', window.scrollY > 0); //Agregas o quitamos la clase Active al header
 });
 
+// Cerrar ventana Modal
+let cerrar = document.querySelectorAll('.cerrar')[0];
+let abrir = document.querySelectorAll('.abrir-modal')[0];
+let modal = document.querySelectorAll('.modal')[0];
+let contenedorModal = document.querySelectorAll('.contenedor-modal')[0];
 
-
+abrir.addEventListener('click', (e) => {
+    e.preventDefault();
+    contenedorModal.style.opacity = '1';
+    contenedorModal.style.visibility = 'visible';
+    modal.classList.toggle('cerrar-modal');
+});
