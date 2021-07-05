@@ -19,8 +19,8 @@
                 </button>
                 <ul class="menu menu_visible animarMenu" id="menu">
                     <li class="menu--items"><a href="#" class="menu--items--links nav-link">Inicio</a></li>
-                    <li class="menu--items"><a href="#" class="menu--items--links nav-link">Sobre Mi</a></li>
-                    <li class="menu--items"><a href="#" class="menu--items--links nav-link">Proyectos</a></li>
+                    <li class="menu--items"><a href="#sobreMi" class="menu--items--links nav-link">Sobre Mi</a></li>
+                    <li class="menu--items"><a href="#Proyectos" class="menu--items--links nav-link">Proyectos</a></li>
                     <li class="menu--items"><a href="#" class="menu--items--links nav-link ">Contacto</a></li>
                 </ul>
             </nav>
@@ -35,7 +35,7 @@
                         Desarrollador de front-end, <br>
                         estudiante de Ingeniería de sistemas
                     </p>
-                    <button class="container__presentacion-boton botonPredeterminado abrir-modal">Contactame</button>
+                    <a href="#Proyectos"><button class="container__presentacion-boton botonPredeterminado">Mis Proyectos</button></a>
                 </div>
 
                 <div class="container__imagen">
@@ -51,37 +51,10 @@
                 </div>
             </div>
         </main>
-        
-        <!-- <section>
-            <div class="contenedor-textos">
-                <h2>Contactarme con Cristian Burneo</h2>
-                <p>Estas son mis redes sociales principales, escríbeme en cualquiera de ellas</p>
-            </div>
-        </section> -->
-
-        <div class="contenedor-modal">
-            <div class="modal cerrar-modal">
-                <div class="modal-cabecera">
-                    <h2>Contactarme con Cristian Burneo</h2>
-                    <p class="cerrar">X</p>
-                </div>
-                <div class="modal-cuerpo">
-                    <div class="modal-iconos">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="modal-textos">
-                        <p>Estas son mis redes sociales principales, escríbeme te leeré</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="presentacion">
             <div class="sobreMi">
-                <div class="contenedor">
+                <div class="contenedor" id="sobreMi">
                     <h2 class="container__titulo">Sobre Mi</h2>
                     <div class="container__miFoto">
                         <img src="../Portafolio/imagenes/fotoSobreMi.jpg" title="Foto de Cristian Burneo">
@@ -157,7 +130,7 @@
             </div>
         </div>
 
-        <div class="proyectos">
+        <div class="proyectos" id="Proyectos">
             <div class="contenedor">
                 <div class="contenido">
                     <h3>Mis Proyectos</h3>
@@ -206,7 +179,28 @@
 
         </div>
 
+        <div class="contacto">
+            <div class="contacto__contenedor">
+
+                <div class="contacto__textos">
+                    <h3>Contactame</h3>
+                    <p>Estas son mis redes sociales principales</p>
+
+                    <div class="contacto-redes">
+                        <a><i class="fab fa-instagram-square"></i></a>
+                        <a><i class="fab fa-facebook-square"></i></a>
+                        <a><i class="fab fa-linkedin"></i></a>
+                        <a><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+            
+                <div class="contacto-imagen">
+                    <img src="../Portafolio/imagenes/message.svg">
+                </div>
+
                 
+            </div>
+        </div>
         
         
         

@@ -154,83 +154,6 @@ body {
     background: var(--titulos);
 }
 
-.contenedor-modal {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal {
-    width: 40%;
-    height: 50%;
-    background: #fff;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    transition: transform 1s;
-    transform: translateY(0%);
-}
-
-.modal-cabecera {
-    background: var(--complementos);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-.modal-cabecera h2 {
-    font-weight: var(--peso-grande);
-    color: #fff;
-}
-
-.cerrar {
-    width: 25px;
-    height: 25px;
-    color: #fff;
-    line-height: 25px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.modal-cuerpo {
-    background: red;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-cuerpo .modal-iconos a {
-    margin: 0 10px;
-}
-
-.modal-textos p {
-    color: var(--textos-normales);
-    font-size: 18px;
-}
-
-.cerrar-modal {
-    transform: translateY(-200%);
-}
-
-
-
-.modal a {
-    font-size: 50px;
-    color: var(--complementos);
-}
-
 .container__imagen {
     grid-area: imagen;
 }
@@ -399,15 +322,15 @@ body {
 
 
 /* Portafolio */
-.proyectos {
+/* .proyectos {
+    background: royalblue;
+} */
+
+.proyectos .contenedor {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.proyectos .contenedor {
-    /* background: blue; */
-    height: 100vh;
+    padding: 80px 0;
 }
 
 .proyectos .contenedor .contenido h3 {
@@ -501,6 +424,65 @@ body {
     font-size: 80px;
     
 }
+
+
+/* Contacto */
+.contacto {
+    background: var(--body-2);
+    height: 100vh;
+}
+
+.contacto .contacto__contenedor {
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    grid-template-areas: 
+    "textos     textos      imagen"
+    "textos     textos      imagen";
+}
+
+.contacto__textos {
+    grid-area: textos;
+    padding: 0 50px;
+}
+
+.contacto__contenedor .contacto__textos h3 {
+    font-size: 70px;
+    color: var(--titulos);
+    font-weight: var(--peso-grande);
+    /* text-align: center; */
+    margin-bottom: 0;
+}
+
+.contacto__contenedor .contacto__textos p {
+    font-size: 20px;
+    color: var(--textos-normales);
+    font-weight: var(--perso-normal);
+}
+
+.contacto-redes {
+    /* background: red; */
+}
+
+.contacto-redes a i{
+    color: var(--complementos);
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.contacto-imagen {
+    grid-area: imagen;
+}
+
+.contacto-imagen img {
+    width: 100%;
+}
+
 
 
 
@@ -669,10 +651,9 @@ body {
     /* Mis habilidades */
     .misHabilidades .contenedor {
         grid-template-areas:
-        "contenido  contenido"
-        "html       css"
-        "javascript bootstrap"
-        "git        mysql";
+        "contenido  contenido   contenido"
+        "html       css         javascript"
+        "bootstrap  git         mysql";
     }
     
     .contenido {
