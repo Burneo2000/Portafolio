@@ -236,6 +236,11 @@ body {
     text-align: justify;
 }
 
+.container__descripcion .botonPredeterminado a {
+    text-decoration: none;
+    color: var(--body-2);
+}
+
 /* Mis habilidades */
 .misHabilidades {
     width: 90%;
@@ -455,7 +460,6 @@ body {
     font-size: 70px;
     color: var(--titulos);
     font-weight: var(--peso-grande);
-    /* text-align: center; */
     margin-bottom: 0;
 }
 
@@ -463,10 +467,6 @@ body {
     font-size: 20px;
     color: var(--textos-normales);
     font-weight: var(--perso-normal);
-}
-
-.contacto-redes {
-    /* background: red; */
 }
 
 .contacto-redes a i{
