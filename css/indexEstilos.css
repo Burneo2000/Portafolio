@@ -484,6 +484,63 @@ body {
 }
 
 
+/* Footer */
+
+.piePagina {
+    background: var(--titulos);
+}
+
+.contenedor__piePagina {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "textos         textos"
+    "copyright      copyright";
+}
+
+.piePagina-textos {
+    grid-area: textos;
+}
+
+.piePagina-textos h3 {
+    font-size: 30px;
+    font-weight: var(--peso-grande);
+    color: var(--body-2);
+}
+
+.piePagina-textos h3 i img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.piePagina-textos p {
+    font-size: 14px;
+    color: var(--body-2);
+    font-weight: var(--perso-normal);
+}
+
+.piePagina-redes a {
+    font-size: 30px;
+    color: var(--complementos);
+    margin: 0 5px;
+}
+
+.piePagina-cop {
+    grid-area: copyright;
+}
+
+.piePagina-cop p{
+    font-size: 14px;
+    color: var(--body-2);
+    font-weight: var(--perso-normal);
+    text-align: center;
+}
+
 
 
 
@@ -621,7 +678,7 @@ body {
     }
 
     .container__titulo {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .container__miFoto {
@@ -643,7 +700,7 @@ body {
     }
 
     .container__descripcion p {
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -685,11 +742,11 @@ body {
     }
     
     .misHabilidades .contenedor .contenido h3 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .misHabilidades .contenedor .contenido p {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .tecnologia {
@@ -697,8 +754,67 @@ body {
     }
     
     .tecnologia__nombre p {
-        font-size: 14px;
+        font-size: 16px;
     }
+
+    /* Mis proyectos */
+    .proyectos .contenedor .contenido h3 {
+        font-size: 35px;
+        color: var(--titulos);
+        font-weight: var(--peso-grande);
+        text-align: center;
+        margin: 0;
+    }
+    
+    .proyectos .contenedor .contenido p {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 60px;
+        color: var(--textos-normales);
+        font-weight: var(--perso-normal);
+    }
+
+    /* Contactame */
+    .contacto {
+        background: var(--body-2);
+        height: 100vh;
+    }
+    
+    .contacto .contacto__contenedor {
+
+        margin: 0 auto;
+        text-align: center;
+        grid-template-areas: 
+        "textos     textos"
+        "textos     textos"
+        "imagen     imagen";
+    }
+    
+    .contacto__textos {
+        grid-area: textos;
+    }
+    
+    .contacto__contenedor .contacto__textos h3 {
+        font-size: 35px;
+    }
+    
+    .contacto__contenedor .contacto__textos p {
+        font-size: 16px;
+    }
+    
+    .contacto-redes a i{
+        font-size: 40px;
+    }
+    
+    .contacto-imagen {
+        grid-area: imagen;
+    }
+    
+    .contacto-imagen img {
+        width: 50%;
+        margin-top: 50px;
+    }
+    
 
 
 }
