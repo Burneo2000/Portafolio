@@ -46,6 +46,7 @@ body {
 
 .Navegacion.active {
     background: var(--complementos);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, .2);
 }
 
 .Navegacion.active .nav-link {
